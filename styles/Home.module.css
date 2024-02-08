@@ -253,19 +253,23 @@
   border-image: linear-gradient(to right, rgb(242, 84, 2) 4%, transparent 4%) 1;
 }
 
+@media screen and (max-width:3000px) {
+  
+
 .vmBtn {
   display: flex;
   margin: 0 auto;
+  margin-bottom: 4vw;
   background-color: rgb(242, 84, 2);
-  width: 8vw;
-  height: 2.5vw;
+  width: 140px;
+  height: 36px;
   border-radius: 20px;
   color: white;
   text-decoration: none;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
+}}
 
 .vmBtn:hover {
   color: white;
@@ -282,7 +286,6 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
   margin: 0 auto;
   max-width: 1200px;
   padding: 20px;
@@ -520,8 +523,8 @@
   } 
 
   .vmBtn {
-    width: 100px;
-    height: 30px;
+    width: 140px;
+    height: 36px;
   }
 }
 
@@ -912,5 +915,60 @@
   .row:nth-of-type(2) .card:nth-last-of-type(2),
   .row:nth-of-type(2) .card:nth-last-of-type(3) {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .card_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-template-rows: repeat(1, 50vw); /* Three rows with a height of 100px each */
+    gap: 10px; 
+    padding-bottom: 3vw;
+  }
+}
+
+@media screen and (min-width: 890px) and (max-width: 1250px) {
+  .card_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    /* grid-template-rows: repeat(3, 80vw); Three rows with a height of 100px each */
+    gap: 1px; /* Gap between grid items */
+    
+  }
+  .card4:nth-child(3) {
+    display: none;
+  }
+  
+}
+
+@media screen and (min-width: 800px) and (max-width: 890px) {
+  .card_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(1, 65vw); /* Three rows with a height of 100px each */
+    gap: 10px; /* Gap between grid items */
+  }
+  .card4:nth-child(3) {
+    display: none;
+  }
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .card4:nth-child(3) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .vmBtn{
+    margin-top: -8vw;
+  }
+}
+@media screen and (min-width: 1950px) {
+  .vmBtn{
+    margin-top: -20vw;
   }
 }

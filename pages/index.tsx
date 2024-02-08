@@ -2,8 +2,12 @@ import Navbar from "@/components/Navbar";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import HomeCard from "@/components/HomeCards";
+
+import AchievementTimeline from "@/components/AchievementTimeline";
 // import BlogContainer from "@/components/BlogContainer";
 // import DirectionCards from "@/components/DirectionCards/DirectionCards";
+// import Mentors from "@/components/OurMentors";
 
 function Home() {
   return (
@@ -69,12 +73,14 @@ function Home() {
 
       {/* our achievments section */}
       {/* our achievments section */}
+      
       <div className={styles.ourachievments_sae}>
         <div className={styles.ourachievments_heading}>
           <h2 className={styles.ourmentors_heading_text}>Our Achievements</h2>
         </div>
         <div className={styles.achievments_cards_sae}>
-          <div className={styles.ourmentors_card1_sae}>
+        <AchievementTimeline/>
+          {/* <div className={styles.ourmentors_card1_sae}>
             <Image
               className={styles.ourmentors_img}
               src="/images/Techfest_img.webp"
@@ -126,7 +132,7 @@ function Home() {
                 1st Position Axelerate&apos;19 Technex&apos;19
               </span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -137,7 +143,14 @@ function Home() {
           <h2 className={styles.ourmentors_heading_text} >Events & Workshop</h2>
         </div>
         <div className={styles.card_container}>
-          <div className={styles.row}>
+          <div className={styles.card4}><HomeCard /></div>
+          <div className={styles.card4}><HomeCard /></div>
+          <div className={styles.card4}><HomeCard /></div>
+          {/* <HomeCard />
+          <HomeCard />
+          <HomeCard /> */}
+          
+          {/* <div className={styles.row}>
             <div className={styles.card}>
               <Image
                 src="/images/car.webp"
@@ -215,7 +228,7 @@ function Home() {
               </p>
               <a href="#">Read More</a>
             </div>
-          </div>
+          </div> */}
         </div>
         <Link href="/events" className={`${styles.vmBtn} ${styles.ourBlogBtn}`}>
           View More
@@ -266,6 +279,9 @@ function Home() {
 
       {/* our mentors section */}
       {/* our mentors section */}
+      <div>
+        
+      </div>
       <div className={styles.ourmentors_sae}>
         <div className={styles.ourachievments_heading}>
           <h2 className={styles.ourmentors_heading_text}>Our Mentors</h2>
